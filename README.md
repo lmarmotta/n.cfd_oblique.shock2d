@@ -1,2 +1,2 @@
-# n.cfd_oblique.shock2d
-Numerical 2D structured code that computes oblique shock reflection (Ms.C CC299 assignment).
+# 2D Oblique shock reflection.
+This code computes an oblique shock reflection in 2D using Harten, Yee and Warming 1st order TVD scheme.

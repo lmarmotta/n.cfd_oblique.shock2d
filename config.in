@@ -1,0 +1,48 @@
+*******************************************************************************
+mach    -> Initial Mach number.
+f_gamma -> Specific heats ratio.
+*******************************************************************************
+
+&PAR_inlet
+
+    mach = 2.9d0
+    u_inf = 2.9d0
+    v_inf = 0.0d0
+    rho_inf = 1.0d0
+    f_gamma = 1.4d0
+
+/
+
+*******************************************************************************
+scheme = 1 -> MacCormack 1st Order [Explicit]
+scheme = 2 -> TVD 1st Order [Explicit]
+scheme = 3 -> TVD 2nd Order [Explicit]
+
+n_iter     -> Number of iterations [max]
+print_step -> Interval of screen output.
+dt         -> Time step in each iteration
+*******************************************************************************
+
+&PAR_numerical
+
+    scheme = 1
+
+    n_iter = 10000
+    dt = 0.001d0
+
+    print_step = 100
+/
+
+*******************************************************************************
+n_ipoints | n_jpoints -> Number of points in each spatial direction.
+x_max | y_max         -> Spatial max dimension [Origin ate (0,0)]
+*******************************************************************************
+
+&PAR_geometrical
+
+    n_ipoints = 20
+        n_jpoints = 20
+
+    x_max = 3.5
+    y_max = 1.0
+/
