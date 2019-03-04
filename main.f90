@@ -44,13 +44,11 @@ program simple_shock
 
     call boundary
 
-
     time_per_iter = 0.0d0
 
     call system_clock(count_rate=crr)
 
     rate = real(crr,kind=8)
-
 
     write(*,*) ""
     write(*,'(A)') "---------------------------------------------------------------"
